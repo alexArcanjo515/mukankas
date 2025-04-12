@@ -7,13 +7,26 @@ Sistema de gestão para o aeroporto da Mukanka na província da Huíla, Angola.
 - Node.js (versão 14 ou superior)
 - MySQL (versão 5.7 ou superior)
 - npm ou yarn
+- Frameworks/bibliotecas necessários:
+  - bcryptjs
+  - cors
+  - dotenv
+  - express
+  - express-rate-limit
+  - express-validator
+  - helmet
+  - jsonwebtoken
+  - lodash
+  - moment
+  - mysql2
+  - winston
 
 ## Instalação
 
 1. Clone o repositório:
 ```bash
 git clone [url-do-repositorio]
-cd aeroporto-mukanka
+cd aeroporto
 ```
 
 2. Instale as dependências:
@@ -72,4 +85,4 @@ O sistema inclui:
 
 ## Licença
 
-Este projeto está licenciado sob a licença MIT. 
+Este projeto está licenciado sob a licença MIT.
