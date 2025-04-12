@@ -25,7 +25,7 @@ Sistema de gestão para o aeroporto da Mukanka na província da Huíla, Angola.
 
 1. Clone o repositório:
 ```bash
-git clone [url-do-repositorio]
+git clone https://github.com/alexArcanjo515/mukankas
 cd aeroporto
 ```
 
