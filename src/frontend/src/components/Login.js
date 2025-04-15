@@ -8,7 +8,7 @@ const Login = ({ onLogin }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (username === "admin" && password === "123456qwe!#" ) {
+    if (username === "admin" && password === "123456qwe!#") {
       onLogin();
     } else {
       setError("Usuário ou senha inválidos.");
@@ -21,17 +21,22 @@ const Login = ({ onLogin }) => {
       justifyContent="center"
       alignItems="center"
       height="100vh"
-      bgcolor="#f5f5f5"
+      sx={{
+        backgroundImage: "url('/Imagem WhatsApp 2025-04-12 às 19.15.56_f58ed0de.jpg')", // Caminho relativo para a imagem na pasta public
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
       <Box
         component="form"
         onSubmit={handleSubmit}
         p={4}
-        bgcolor="white"
+        bgcolor="rgba(255, 255, 255, 0.8)" // Fundo branco com transparência
         borderRadius={2}
         boxShadow={3}
         textAlign="center"
         width="300px"
+        border="2px solid white" // Bordas brancas
       >
         <Typography variant="h5" mb={2}>
           Login
