@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Login from './components/Login';
 
 // Importando os componentes
 import Layout from './components/Layout';
@@ -24,7 +25,17 @@ const theme = createTheme({
   },
 });
 
-function App() {
+const App = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
+
+  if (!isAuthenticated) {
+    return <Login onLogin={handleLogin} />;
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -40,6 +51,6 @@ function App() {
       <ToastContainer />
     </ThemeProvider>
   );
-}
+};
 
-export default App; 
+export default App;
